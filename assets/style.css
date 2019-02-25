@@ -10,3 +10,25 @@
 #weather{
   color: lightsalmon;
 }
+
+#quote{
+  text-align: center;
+  color: lightblue;
+}
+
+#todoList{
+  text-align: right;
+  background-color: white;
+  opacity: 0.2;
+}
+#todoList:hover {
+  opacity: 0.85;
+}
+
+#author{
+  opacity: 0;
+}
+
+#author:hover {
+  opacity: 1;
+}
