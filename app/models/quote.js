@@ -1,8 +1,8 @@
 export default class Quote {
   constructor(data) {
-    this.id = data.quote.id
-    this.body = data.quote.body
-    this.author = data.quote.author
+    this.id = data.id
+    this.body = data.body
+    this.author = data.author
   }
   getTemplate() {
     return `

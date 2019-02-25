@@ -25,7 +25,7 @@ export default class QuoteService {
   }
 
   get Quote() {
-    return _state.quote.map(q => new Quote(q))
+    return _state.quote
   }
 
   getQuote() {
