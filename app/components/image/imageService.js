@@ -7,7 +7,7 @@ const imgApi = axios.create({
 });
 
 let _state = {
-  image: []
+  image: {}
 }
 let _subscribers = {
   image: []
@@ -32,7 +32,7 @@ export default class ImageService {
     console.log("Getting the Image")
     imgApi.get('')
       .then(res => {
-        console.log(res.data.data)
+        console.log(res.data)
         let imgData = res.data.data
         imgData = new Image(res.data)
         _setState('image', imgData)

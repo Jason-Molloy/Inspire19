@@ -35,8 +35,8 @@ export default class WeatherService {
     console.log('Calling the weatherman...')
     weatherApi.get('')
       .then(res => {
-        console.log(res.data.data)
-        let weatherData = res.data.data.map(w => new Weather(w))
+        console.log(res.data)
+        let weatherData = new Weather(res.data)
         setState('weather', weatherData)
       })
   }

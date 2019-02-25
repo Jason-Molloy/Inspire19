@@ -26,9 +26,9 @@ export default class QuoteService {
     console.log("Getting the Quote")
     _quoteApi.get('')
       .then(res => {
-        console.log(res.data.data)
+        console.log(res.data.quote)
         // WHAT DO YOU DO WITH THE RESPONSE? - check
-        let quoteData = res.data.data.map(q => new Quote(q))
+        let quoteData = new Quote(res.data.quote)
         _setState('quote', quoteData)
       })
   }
