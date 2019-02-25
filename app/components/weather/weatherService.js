@@ -23,20 +23,22 @@ function setState(prop, data) {
 //public
 export default class WeatherService {
 
-  get Weather() {
-    return _state.weather.map(w => new Weather(w))
-  }
-
   addSubscriber(prop, fn) {
     _subscribers[prop].push(fn)
   }
+
+  get Weather() {
+    return _state.weather
+  }
+
   getApiWeather() {
     //debugger
     console.log('Calling the weatherman...')
     weatherApi.get('')
       .then(res => {
         console.log(res.data)
-        let weatherData = new Weather(res.data)
+        let weatherData = res.data.data
+        weatherData = new Weather(res.data)
         setState('weather', weatherData)
       })
   }

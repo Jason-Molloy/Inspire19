@@ -5,8 +5,9 @@ var _ws = new WeatherService()
 function drawWeather() {
   console.log("THE WEATHER MAN SAYS:", _ws.Weather)
   let weather = _ws.Weather
-  let template = weather.getTemplate()
-  document.getElementById("weather").innerHTML = template
+  let template = ''
+  template += weather.getTemplate()
+  document.getElementById('weather').innerHTML = weather.getTemplate()
 }
 
 export default class WeatherController {
@@ -16,7 +17,4 @@ export default class WeatherController {
     _ws.getApiWeather()
   }
 
-  getWeather() {
-    _ws.getApiWeather()
-  }
 }
