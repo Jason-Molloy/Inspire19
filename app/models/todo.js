@@ -10,13 +10,13 @@ export default class Todo {
       return `
     <li><del>${this.description}</del><input type="checkbox" name="complete" value="${this.completed}" 
     <button onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')">Review</button>
-    <button onclick="app.controllers.todoController.removeTodo('${this._id}')">Remove</button></li>
+    <button class="btn btn-outline-danger btn-sm" onclick="app.controllers.todoController.removeTodo('${this._id}')">Remove</button></li>
     `
     } else {
       return `
     <li>${this.description}<input type="checkbox" name="complete" value="${this.completed}" 
     <button onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')">Complete</button>
-    <button onclick="app.controllers.todoController.removeTodo('${this._id}')">Remove</button></li>
+    <button class="btn btn-outline-danger btn-sm" onclick="app.controllers.todoController.removeTodo('${this._id}')">Remove</button></li>
     `
     }
   }

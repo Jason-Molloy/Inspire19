@@ -9,7 +9,7 @@ export default class Weather {
 
   getTemplate() {
     return `
-    <div>${this.fahrenheit}</div>
+    <div><h5>Current temp in Boise: ${this.fahrenheit} F</h5></div>
     `
   }
 }
